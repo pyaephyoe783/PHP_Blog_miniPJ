@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #e0e6f1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.main-container {
+    display: flex;
+    width: 70%;
+    max-width: 500px;
+    height: 80%;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.left-panel {
+    flex: 1;
+  background-image: url('./img/leftBg.jfif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.logo {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.logoImg{
+    width: 30px;
+}
+
+.brand-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.brand-slogan {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.welcome-text{
+    margin: auto;
+    padding-left: 10%;  
+    padding-bottom: 50%;
+}
+
+.welcome-text h1 {
+    font-size: 25px;
+    font-weight: bold;
+ 
+}
+
+.welcome-text h1 span {
+    display: inline-block;
+    opacity: 0;
+}
+
+.welcome-text h1 span {
+    display: inline-block;
+    opacity: 0;
+}
+
+.welcome-text h1 span:first-child {
+    animation: slideInFromLeft 1s forwards;
+}
+
+.welcome-text h1 span:last-child {
+    animation: slideInFromRight 1s forwards 0.5s;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F0F1;
+    width: 70%;
+}
+
+.login-card {
+    width: 50%;
+    padding: 20px;
+    background-color: #FEF8F8;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.login-card h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 0px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    font-size: 10px;
+}
+
+
+
+/* Login button style */
+.login-button {
+    width: 100%;
+    padding: 5px;
+    background-color: #190CD7; /* အပြာရောင် */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #1a4d80;
+}
+
+.powered{
+    font-size: 8px;
+    color: rgb(105, 101, 101);
+}
+
+.errorMessage{ 
+    text-align: center;
+    padding: -10px;
+    font-size: 7px;
+}
+
+.register{
+    color: black;
+    text-decoration: none;
+    font-size: small;
+}
