@@ -19,7 +19,7 @@
             $stmt=$conn->prepare($sql);
 
             $stmt->bindParam(':username',$username);
-            // $stmt->bindParam(':password',$password);
+     
             $stmt->execute();
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
