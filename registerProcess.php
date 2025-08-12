@@ -20,7 +20,7 @@ try {
             exit();
         }
 
-        // Check if username already exists
+        
         $check_sql = "SELECT id FROM users WHERE username = :username";
         $stmt = $conn->prepare($check_sql);
         $stmt->bindParam(':username', $username);
@@ -32,16 +32,16 @@ try {
             exit();
         }
 
-        // Hash the password for security
+       
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $is_admin = 0;
 
-        // Corrected SQL query with the right column name
+        
         $sql = "INSERT INTO users (username, password, is_admin) VALUES (:username, :password, :is_admin)";
 
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':username', $username);
-        $stmt->bindParam(':password', $hashed_password); // 🚨 Use the HASHED password here
+        $stmt->bindParam(':password', $hashed_password);
         $stmt->bindParam(':is_admin', $is_admin, PDO::PARAM_INT);
         $stmt->execute();
 

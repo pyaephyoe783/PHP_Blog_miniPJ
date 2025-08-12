@@ -8,13 +8,13 @@
 <body>
     <div style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid black; border-radius: 5px;">
         <h2>Register New User</h2>
-        <!-- <?php
+        <?php
         session_start();
         if (isset($_SESSION['register_error'])) {
             echo "<p style='color:red;'>" . htmlspecialchars($_SESSION['register_error']) . "</p>";
             unset($_SESSION['register_error']);
         }
-        ?> -->
+        ?>
         <form action="registerProcess.php" method="POST">
             <div>
                 <label for="username">Username:</label><br>

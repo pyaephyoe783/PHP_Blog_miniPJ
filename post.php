@@ -38,7 +38,7 @@
 
     try{
         $stmt->execute();
-        // $_SESSION['message'] = 'Post created Successfully';
+        $_SESSION['message'] = 'Post created Successfully';
         header("Location: dashboard.php");
 
     }catch (PDOException $e) {
